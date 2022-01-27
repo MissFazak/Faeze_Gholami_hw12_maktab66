@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/sass/input.css">
+  </head>
+  <body>
+    <form id="forms" onsubmit="handelSubmit(event)" >
+      <div class="firstName">
+        <label for="">نام</label>
+        <input id="firstName" type="text" name="firstName" placeholder="اسم خود را وارد کنید...." />
+      </div>
+      <div>
+        <label for="">نام خانوادگی</label>
+        <input id="lastName" type="text" name="lastName" placeholder="فامیلی خود را وارد کنید...."/>
+      </div>
+
+      <div>
+        <label for="">کشور</label>
+        <select name="country" id="selects">
+          <option value="1">ایران</option>
+          <option value="2">هند</option>
+          <option value="3">آمریکا</option>
+          <option value="4">آلمان</option>
+          <option value="5">کره جنوبی</option>
+        </select>
+      </div>
+      <div>
+        <label for="">موضوع</label>
+        <textarea name="subject" id="subject" cols="10" rows="4" placeholder="چیزی بنویسید...."></textarea>
+      </div>
+      <button>ثبت</button>
+    </form>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div>اطلاعات شما با موفقیت ثبت گردید</div>
+      </div>
+    </div>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

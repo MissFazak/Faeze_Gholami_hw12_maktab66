@@ -1,0 +1,16 @@
+@mixin padd($x,$y,$pesudo:false) {
+    width: 100%;
+    border: solid black;
+    @if $pesudo{
+        padding-top: 0;
+    }
+    @else{
+        padding-top:($y/$x)*1%;
+
+    }
+    
+}
+
+.diving{
+    @include padd(2,20 ,false)
+}

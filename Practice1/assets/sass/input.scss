@@ -1,0 +1,101 @@
+$succesColor: rgb(46, 192, 46);
+$borderRadius: 5px;
+$fontSize: 15px;
+$fontFamily:koodak;
+@mixin bordered($color, $width) {
+  border: $width solid $color;
+}
+
+@font-face{
+  font-family: koodak;
+  src: url(../font/KoodakBold.woff);
+}
+
+body{
+  font-family:$fontFamily;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #c1f59e;
+  margin: 15% auto;
+  padding: 20px;
+  @include bordered(rgb(129, 129, 141), 1px);
+  width: 50%;
+  border-radius: $borderRadius;
+  text-align: center;
+  font-size: $fontSize;
+}
+
+form {
+  background-color: #3eceaf;
+  margin: 2% auto;
+  padding:0 20px 10px 40px;
+  @include bordered(rgb(129, 129, 141), 1px);
+  width: 50%;
+  border-radius: $borderRadius;
+}
+
+form {
+  label {
+    margin: 5px 0;
+    display: block;
+    font-size: $fontSize;
+  }
+}
+
+input {
+  font-family:$fontFamily;
+  padding: 0 10px;
+  border-radius: $borderRadius;
+  @include bordered(rgb(129, 129, 141), 1px);
+  height: 35px;
+  width: 100%;
+  border: none;
+  font-size: $fontSize;
+}
+select {
+  font-family:$fontFamily;
+  padding: 0 10px;
+  border-radius: $borderRadius;
+  border: none;
+  padding: 5px;
+  font-size: $fontSize;
+
+}
+
+textarea {
+  font-size: $fontSize;
+  font-family:$fontFamily;
+  padding: 0 10px;
+  border-radius: $borderRadius;
+  width: 100%;
+  resize: none;
+  border: none;
+}
+
+button {
+  font-family:$fontFamily;
+  background-color: $succesColor;
+  padding: 10px;
+  border: none;
+  border-radius: $borderRadius;
+  font-size: $fontSize;
+  margin-top: 20px;
+}
+
+.valid {
+  @include bordered(red, 2px)
+}
